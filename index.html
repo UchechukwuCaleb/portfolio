@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cornelius Caleb — Portfolio</title>
+  <meta name="description" content="Cornelius Caleb — Chemical Engineer & Aspiring Web/Data Developer" />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#9aa4b2;--glass: rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:linear-gradient(180deg,#071021 0%, #081427 100%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .container{max-width:980px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#02101a}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:26px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .intro h2{margin:0 0 8px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .tag{background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--muted);font-size:0.85rem}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .skill{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:10px;border-radius:8px}
+    .projects{margin-top:18px;display:grid;gap:12px}
+    .proj{display:flex;gap:12px;align-items:center}
+    .proj-thumb{width:120px;height:72px;border-radius:8px;background:#061722;display:flex;align-items:center;justify-content:center;font-weight:600}
+    .muted{color:var(--muted)}
+    .actions{display:flex;gap:10px;margin-top:14px}
+    .btn{background:var(--accent);color:#02101a;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .outline{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--muted);text-decoration:none}
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:0.9rem;padding:18px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.brand h1{font-size:1.2rem}}
+    /* project modal */
+    .modal{position:fixed;inset:0;background:rgba(1,6,10,0.6);display:none;align-items:center;justify-content:center;padding:20px}
+    .modal.open{display:flex}
+    .modal-card{background:linear-gradient(180deg,#071826,#081a2a);padding:18px;border-radius:10px;max-width:700px;width:100%}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">CC</div>
+        <div>
+          <h1>Cornelius Caleb</h1>
+          <p class="lead">Chemical Engineer • Aspiring Web Developer & Data Analyst</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h2>Hi — I solve practical problems with engineering rigor and modern web/data tools.</h2>
+        <p class="muted">First-Class Chemical Engineering graduate from the University of Abuja. I combine process-thinking with front-end development and data analysis to build solutions that work in the real world.</p>
+
+        <div class="tags" aria-hidden>
+          <div class="tag">Process Optimization</div>
+          <div class="tag">Responsive Web Design</div>
+          <div class="tag">Data Analysis (Python/Excel)</div>
+          <div class="tag">Project Management</div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="#projects">See projects</a>
+          <a class="outline" href="/resume.pdf" download>Download CV</a>
+        </div>
+
+        <div id="about" style="margin-top:18px">
+          <h3>About me</h3>
+          <p class="muted">I served as Academic Coordinator and Choir Master at Deeper Life Campus Fellowship, University of Abuja. I'm passionate about applying engineering principles to improve processes and using tech skills to build accessible digital tools for communities.</p>
+        </div>
+      </div>
+
+      <aside class="card" style="height:100%">
+        <h3>Quick info</h3>
+        <div style="margin-top:10px">
+          <strong>Location</strong>
+          <p class="muted">Gwagwalada, Abuja FCT, Nigeria</p>
+          <strong>Education</strong>
+          <p class="muted">BEng Chemical Engineering — University of Abuja (First Class)</p>
+          <strong>Contact</strong>
+          <p class="muted">corneliuscaleb27@gmail.com<br>+234 703 691 7832</p>
+        </div>
+
+        <div style="margin-top:12px">
+          <h4>Certifications</h4>
+          <ul class="muted">
+            <li>Mercatura School of Technology — Web Development</li>
+            <li>Online courses — Data Analysis & Excel</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section id="skills" class="card" style="margin-top:18px">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill">
+          <strong>Engineering</strong>
+          <div class="muted">Process design, safety compliance, lab & pilot testing, process optimisation</div>
+        </div>
+        <div class="skill">
+          <strong>Web Development</strong>
+          <div class="muted">HTML, CSS, JavaScript — responsive websites & UI prototyping</div>
+        </div>
+        <div class="skill">
+          <strong>Data</strong>
+          <div class="muted">Python (pandas), Excel analytics, SQL basics, visualization</div>
+        </div>
+        <div class="skill">
+          <strong>Tools</strong>
+          <div class="muted">Git & GitHub, MS Office, Figma (basic), Project management</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="card projects">
+      <h3>Selected projects</h3>
+
+      <div class="proj">
+        <div class="proj-thumb">ENG</div>
+        <div>
+          <strong>Process Efficiency Study — University Pilot Plant</strong>
+          <div class="muted">Applied mass-balance and energy analysis to identify bottlenecks. Implemented small operational changes that improved throughput and reduced losses.</div>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-thumb">WEB</div>
+        <div>
+          <strong>Responsive Portfolio Website</strong>
+          <div class="muted">Built a responsive single-page site using HTML, CSS and JavaScript to showcase projects and resume. Designed for accessibility and mobile-first layout.</div>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-thumb">DATA</div>
+        <div>
+          <strong>Sales Data Analysis — Python</strong>
+          <div class="muted">Cleaned and analyzed a sales dataset to identify trends, produce pivot metrics and visualizations for stakeholders.</div>
+        </div>
+      </div>
+
+      <p style="margin-top:12px" class="muted">Want these projects expanded into case-studies with code, visuals, and downloadable notebooks? I can create: 1) GitHub-ready repos, 2) PDF case-studies, or 3) live demos.</p>
+    </section>
+
+    <section id="certs" class="card" style="margin-top:18px">
+      <h3>Certifications & Training</h3>
+      <ul class="muted">
+        <li>Mercatura School of Technology — Web Development (ongoing)</li>
+        <li>Coursera / Udemy courses — Data Analysis, Excel</li>
+        <li>NYSC — Community Project Experience</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px">
+      <h3>Contact</h3>
+      <p class="muted">Email me at <a href="mailto:corneliuscaleb27@gmail.com">corneliuscaleb27@gmail.com</a> or call/WhatsApp +2347036917832.</p>
+      <p class="muted">I can provide a downloadable CV, links to GitHub, live demos, and PDF case-studies on request.</p>
+    </section>
+
+    <footer>
+      Built with care • © <span id="year"></span> Cornelius Caleb
+    </footer>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <h3 id="modalTitle">Project</h3>
+      <p id="modalBody" class="muted">Details about the project will go here.</p>
+      <div style="margin-top:12px;text-align:right">
+        <button class="outline" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function openModal(title, body){
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalBody').textContent = body;
+      document.getElementById('modal').classList.add('open');
+    }
+    function closeModal(){document.getElementById('modal').classList.remove('open')}
+  </script>
+</body>
+</html>
